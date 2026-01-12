@@ -1,7 +1,7 @@
 import math
 
 def graph(width = 60, height = 25, x_min = -10, x_max = 10):
-    func = input().replace("^", "**").replace("sin", "math.sin").replace("cos", "math.cos").replace("tan", "math.tan").replace("ln", "math.log")
+    func = input("Enter your function: ").replace("^", "**").replace("sin", "math.sin").replace("cos", "math.cos").replace("tan", "math.tan").replace("ln", "math.log")
 
     for y in range(height, -height, -1):
         line = ""
@@ -44,6 +44,10 @@ def graph(width = 60, height = 25, x_min = -10, x_max = 10):
                 else:
                     line += " "
         print(line)
+
+    action = input("Type 1 to graph a new function, press enter to exit: ")
+    if action == "1":
+        graph()
 
 if __name__ == "__main__":
     graph()
